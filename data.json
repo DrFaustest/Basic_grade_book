@@ -1,0 +1,49 @@
+{
+    "Math101": {
+        "Alice": {
+            "Homework1": 95,
+            "Test1": 88
+        },
+        "Bob": {
+            "Homework1": 90,
+            "Test1": 92
+        },
+        "Pete": {
+            "Test1": 50,
+            "Homework1": 200
+        }
+    },
+    "Physics201": {
+        "Alice": {
+            "Homework1": 85,
+            "Test1": 90,
+            "Test 2": 90
+        },
+        "Charlie": {
+            "Homework1": 88,
+            "Test1": 94,
+            "Test 2": 10
+        },
+        "Bob": {
+            "Test1": 20,
+            "Test 2": 80,
+            "Homework1": 30
+        }
+    },
+    "Meto": {
+        "Bob": {
+            "Test 1": 20,
+            "Test 2": 30,
+            "Test 3": 12,
+            "Test 4": 50,
+            "Test 5": 90
+        },
+        "shelly": {
+            "Test 1": 80,
+            "Test 2": 30,
+            "Test 3": 100,
+            "Test 4": 50,
+            "Test 5": 20
+        }
+    }
+}
