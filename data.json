@@ -2,15 +2,23 @@
     "Math101": {
         "Alice": {
             "Homework1": 95,
-            "Test1": 88
+            "Test1": 88,
+            "test 15": 10
         },
         "Bob": {
             "Homework1": 90,
-            "Test1": 92
+            "Test1": 92,
+            "test 15": 90
         },
         "Pete": {
             "Test1": 50,
-            "Homework1": 200
+            "Homework1": 200,
+            "test 15": 20
+        },
+        "Billy": {
+            "Homework1": "Not Graded",
+            "Test1": "Not Graded",
+            "test 15": "Not Graded"
         }
     },
     "Physics201": {
