@@ -1,57 +1,1277 @@
 {
     "Math101": {
-        "Alice": {
-            "Homework1": 95,
-            "Test1": 88,
-            "test 15": 10
-        },
-        "Bob": {
-            "Homework1": 90,
-            "Test1": 92,
-            "test 15": 90
-        },
         "Pete": {
-            "Test1": 50,
-            "Homework1": 200,
-            "test 15": 20
-        },
-        "Billy": {
-            "Homework1": "Not Graded",
-            "Test1": "Not Graded",
-            "test 15": "Not Graded"
+            "Test1": {
+                "score": 200000,
+                "max_points": 100
+            },
+            "Homework1": {
+                "score": 50,
+                "max_points": 100
+            },
+            "test 15": {
+                "score": 200,
+                "max_points": 200
+            },
+            "test 01": {
+                "score": 200,
+                "max_points": null
+            }
         }
     },
-    "Physics201": {
-        "Alice": {
-            "Homework1": 85,
-            "Test1": 90,
-            "Test 2": 90
+    "life": {},
+    "Music": {},
+    "Band": {},
+    "PE": {
+        "A": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
         },
-        "Charlie": {
-            "Homework1": 88,
-            "Test1": 94,
-            "Test 2": 10
+        "B": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
         },
-        "Bob": {
-            "Test1": 20,
-            "Test 2": 80,
-            "Homework1": 30
-        }
-    },
-    "Meto": {
-        "Bob": {
-            "Test 1": 20,
-            "Test 2": 30,
-            "Test 3": 12,
-            "Test 4": 50,
-            "Test 5": 90
+        "C": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
         },
-        "shelly": {
-            "Test 1": 80,
-            "Test 2": 30,
-            "Test 3": 100,
-            "Test 4": 50,
-            "Test 5": 20
+        "D": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "E": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "F": {
+            "1": {
+                "score": 1,
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "G": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "H": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "I": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "J": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "K": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "L": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": 3,
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "M": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "N": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "O": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": 2,
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "P": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": 0,
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": 8,
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": 12,
+                "max_points": 12
+            }
+        },
+        "Q": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "R": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "S": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "Y": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "U": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "V": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "W": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "X": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
+        },
+        "Z": {
+            "1": {
+                "score": "Not Graded",
+                "max_points": 1
+            },
+            "2": {
+                "score": "Not Graded",
+                "max_points": 2
+            },
+            "3": {
+                "score": "Not Graded",
+                "max_points": 3
+            },
+            "4": {
+                "score": "Not Graded",
+                "max_points": 4
+            },
+            "5": {
+                "score": "Not Graded",
+                "max_points": 5
+            },
+            "6": {
+                "score": "Not Graded",
+                "max_points": 6
+            },
+            "7": {
+                "score": "Not Graded",
+                "max_points": 7
+            },
+            "8": {
+                "score": "Not Graded",
+                "max_points": 8
+            },
+            "9": {
+                "score": "Not Graded",
+                "max_points": 9
+            },
+            "10": {
+                "score": "Not Graded",
+                "max_points": 10
+            },
+            "11": {
+                "score": "Not Graded",
+                "max_points": 11
+            },
+            "12": {
+                "score": "Not Graded",
+                "max_points": 12
+            }
         }
     }
 }
