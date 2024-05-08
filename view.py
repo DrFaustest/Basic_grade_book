@@ -99,8 +99,6 @@ class GradebookApp:
         grade_label.pack(pady=10)
         grade_scroll = tk.Scrollbar(grade_popup)
         grade_scroll.pack(side=tk.RIGHT, fill=tk.Y)
-        grade_label.config(yscrollcommand=grade_scroll.set)
-        grade_scroll.config(command=grade_label.yview)
         
         grade_popup.mainloop()
 
