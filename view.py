@@ -40,16 +40,32 @@ class GradebookApp:
         self.button_add_class = tk.Button(self.button_frame, text="Add Class", command=self.add_class)
         self.button_add_student = tk.Button(self.button_frame, text="Add Student", command=self.add_student)
         self.button_add_assignment = tk.Button(self.button_frame, text="Add Assignment", command=self.add_assignment)
-        self.button_remove_student = tk.Button(self.button_frame, text="Remove Student", command=self.remove_student)
-        self.button_remove_student.pack(fill=tk.X, padx=10, pady=10)
-        self.button_remove_assignment = tk.Button(self.button_frame, text="Remove Assignment", command=self.remove_assignment)
-        self.button_remove_assignment.pack(fill=tk.X, padx=10, pady=10)
-        self.button_total_grade = tk.Button(self.button_frame, text="Total Grade", command=self.calculate_total_grade)
-        self.button_total_grade.pack(fill=tk.X, padx=10, pady=10)
-        
         self.button_add_class.pack(fill=tk.X, padx=10, pady=10)
         self.button_add_student.pack(fill=tk.X, padx=10, pady=10)
         self.button_add_assignment.pack(fill=tk.X, padx=10, pady=10)
+        
+        # Black line separator
+        self.separator1 = ttk.Separator(self.button_frame, orient='horizontal')
+        self.separator1.pack(fill=tk.X, pady=10)
+        
+        self.button_total_grade = tk.Button(self.button_frame, text="Total Grade", command=self.calculate_total_grade)
+        self.button_total_grade.pack(fill=tk.X, padx=10, pady=10)
+
+        # Black line separator
+        self.separator3 = ttk.Separator(self.button_frame, orient='horizontal')
+        self.separator3.pack(fill=tk.X, pady=10)
+        
+        # Wide gap
+        self.separator2 = tk.Frame(self.button_frame, height=50, bg=None)
+        self.separator2.pack(fill=tk.X)
+        
+        self.button_remove_student = tk.Button(self.button_frame, text="Remove Student", command=self.remove_student, bg='red', fg='white')
+        self.button_remove_student.pack(fill=tk.X, padx=10, pady=10)
+
+        self.button_remove_assignment = tk.Button(self.button_frame, text="Remove Assignment", command=self.remove_assignment, bg='red', fg='white')
+        self.button_remove_assignment.pack(fill=tk.X, padx=10, pady=10)
+        
+
         
         self.tree_frame = tk.Frame(master)
         self.tree_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
@@ -77,9 +93,14 @@ class GradebookApp:
         
         grade_popup = tk.Toplevel(self.master)
         grade_popup.title("Class Grades")
+        grade_popup.geometry("300x300")
         
         grade_label = tk.Label(grade_popup, text="\n".join(grade_list), font=("Arial", 12))
         grade_label.pack(pady=10)
+        grade_scroll = tk.Scrollbar(grade_popup)
+        grade_scroll.pack(side=tk.RIGHT, fill=tk.Y)
+        grade_label.config(yscrollcommand=grade_scroll.set)
+        grade_scroll.config(command=grade_label.yview)
         
         grade_popup.mainloop()
 
@@ -215,7 +236,7 @@ class GradebookApp:
             Returns:
                 None
         '''
-        self.grades_view["columns"] = ["Student Name"] + assignments
+        self.grades_view["columns"] = ["Student Name"] + self.controller.get_assignments()
         self.grades_view.heading('#1', text='Student Name', anchor='w')
         for idx, assignment in enumerate(assignments, start=2):
             self.grades_view.column(f'#{idx}', anchor='center', width=100)
@@ -288,6 +309,7 @@ class GradebookApp:
                 messagebox.showerror("Error", "Assignment already exists.", parent=self.master)
             else:
                 max_points = simpledialog.askinteger("Add Assignment", "Enter maximum points:", parent=self.master)
+                self.master.focus_set()
                 if max_points is not None and max_points >= 0:
                     success, message = self.controller.add_assignment(class_id, assignment_details, max_points)
                     messagebox.showinfo("Success", message if success else "Failed to add assignment")

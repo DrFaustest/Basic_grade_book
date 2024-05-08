@@ -61,10 +61,12 @@ class GradebookController:
         Returns:
         - List[str]: A list of assignment names.
         """
-        assignments = set()
+        assignments = []
         for grades in self.current_class_data.values():
-            assignments.update(grades.keys())
-        return list(assignments)
+            for assignment in grades.keys():
+                if assignment not in assignments:
+                    assignments.append(assignment)
+        return assignments
 
     def get_grades(self, assignment_name: str) -> Dict[str, Union[int, str]]:
         """
