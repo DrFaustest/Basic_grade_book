@@ -7,6 +7,15 @@ from controller import GradebookController
 class GradebookApp:
 
     def __init__(self, master: tk.Tk) -> None:
+        '''
+        Initialize the GradebookApp class
+        
+        Parameters:
+            master (tk.Tk): The root window
+            
+            Returns:
+                None
+        '''
         self.master = master
         master.title("Gradebook Application")
         self.controller = GradebookController()
@@ -35,6 +44,8 @@ class GradebookApp:
         self.button_remove_student.pack(fill=tk.X, padx=10, pady=10)
         self.button_remove_assignment = tk.Button(self.button_frame, text="Remove Assignment", command=self.remove_assignment)
         self.button_remove_assignment.pack(fill=tk.X, padx=10, pady=10)
+        self.button_total_grade = tk.Button(self.button_frame, text="Total Grade", command=self.calculate_total_grade)
+        self.button_total_grade.pack(fill=tk.X, padx=10, pady=10)
         
         self.button_add_class.pack(fill=tk.X, padx=10, pady=10)
         self.button_add_student.pack(fill=tk.X, padx=10, pady=10)
@@ -45,7 +56,44 @@ class GradebookApp:
         
         self.setup_treeview()
 
+    def calculate_total_grade(self) -> None:
+        '''
+        
+        Calculate the total grade for each student in the class
+        
+        Parameters:
+            None
+            
+            Returns:
+                None
+        '''
+        class_id = self.class_selection.get()
+        students = self.controller.get_students()
+        grade_list = []
+        for student in students:
+            percentage = self.controller.determine_class_grade(class_id, student)
+            letter_grade = self.controller.convert_to_letter_grade(percentage)
+            grade_list.append(f"{student}: {letter_grade} ({percentage}%)")
+        
+        grade_popup = tk.Toplevel(self.master)
+        grade_popup.title("Class Grades")
+        
+        grade_label = tk.Label(grade_popup, text="\n".join(grade_list), font=("Arial", 12))
+        grade_label.pack(pady=10)
+        
+        grade_popup.mainloop()
+
     def on_class_selected(self, event) -> None:
+        '''
+        
+        Handle the event when a class is selected
+        
+        Parameters:
+            event (tk.Event): The event that triggered the function
+            
+            Returns:
+                None
+        '''
         class_id = self.class_selection.get()
         self.controller.load_data(class_id)
         assignments = self.controller.get_assignments()
@@ -60,19 +108,39 @@ class GradebookApp:
             self.grades_view.insert('', 'end', values=row_values)
 
     def remove_student(self) -> None:
+        '''
+        
+        Remove a student from the class
+        
+        Parameters:
+            None
+            
+            Returns:
+                None
+        '''
         selected_item = self.grades_view.focus()
         if selected_item:
             student_name = self.grades_view.item(selected_item, 'values')[0]
             success, message = self.controller.remove_student(self.class_selection.get(), student_name)
             if success:
                 self.grades_view.delete(selected_item)
-                messagebox.showinfo("Success", message)
+                messagebox.showinfo("Success", message, parent=self.master)
                 self.on_class_selected(event=None)
             else:
-                messagebox.showerror("Error", message)
+                messagebox.showerror("Error", message, parent=self.master)
 
 
     def remove_assignment(self,) -> None:
+        '''
+        
+        Remove an assignment from the class
+        
+        Parameters:
+            None
+            
+            Returns:
+                None
+        '''
         selected_item = self.grades_view.focus()
         if selected_item:
             student_name, assignment_name = self.last_clicked
@@ -80,13 +148,23 @@ class GradebookApp:
             success, message = self.controller.remove_assignment(selected_class, assignment_name)
             if success:
                 self.grades_view.delete(selected_item)
-                messagebox.showinfo("Success", message)
+                messagebox.showinfo("Success", message, parent=self.master)
                 self.class_selection.set(selected_class)
                 self.on_class_selected(event=None)
             else:
-                messagebox.showerror("Error", message)
+                messagebox.showerror("Error", message, parent=self.master)
 
     def setup_treeview(self) -> None:
+        '''
+        
+        Setup the treeview for the application
+        
+        Parameters:
+            None
+            
+            Returns:
+                None
+        '''
         self.tree_frame = tk.Frame(self.master)
         self.tree_frame.pack(fill=tk.BOTH, expand=True)
         
@@ -100,6 +178,16 @@ class GradebookApp:
         self.grades_view.bind("<Double-1>", self.edit_grade)
 
     def on_cell_click(self, event: tk.Event) -> None:
+        '''
+        
+        Handle the event when a cell is clicked
+        
+        Parameters:
+            event (tk.Event): The event that triggered the function
+            
+            Returns:
+                None
+        '''
         row_id = self.grades_view.identify_row(event.y)
         column_id = self.grades_view.identify_column(event.x)
         student_name = self.grades_view.item(row_id, 'values')[0]
@@ -117,6 +205,16 @@ class GradebookApp:
         print(f'You clicked on cell with value: {cell_value}')
     
     def update_treeview_columns(self, assignments: List[str]) -> None:
+        '''
+        
+        Update the columns in the treeview
+        
+        Parameters:
+            assignments (List[str]): The list of assignments
+            
+            Returns:
+                None
+        '''
         self.grades_view["columns"] = ["Student Name"] + assignments
         self.grades_view.heading('#1', text='Student Name', anchor='w')
         for idx, assignment in enumerate(assignments, start=2):
@@ -126,49 +224,85 @@ class GradebookApp:
         self.grades_view.bind('<ButtonRelease-1>', self.on_cell_click)
 
     def add_class(self) -> None:
-        class_name = simpledialog.askstring("Add Class", "Enter class name:")
+        '''
+        Add a class to the controller
+
+        Parameters:
+            None
+
+        Returns:
+            None
+        '''
+        class_name = simpledialog.askstring("Add Class", "Enter class name:", parent=self.master)
         if class_name:
             if class_name in self.controller.classes:
-                messagebox.showerror("Error", "Class already exists.")
+                messagebox.showerror("Error", "Class already exists.", parent=self.master)
             else:
                 success, message = self.controller.add_class(class_name)
                 if success:
                     self.controller.load_data()
                     self.class_selection['values'] = self.controller.classes
-                    messagebox.showinfo("Success", "Class added successfully")
+                    messagebox.showinfo("Success", "Class added successfully", parent=self.master)
                     self.on_class_selected(event=None)
                 else:
-                    messagebox.showerror("Error", message)
+                    messagebox.showerror("Error", message, parent=self.master)
 
     def add_student(self) -> None:
+        '''
+        Add a student to the class
+        
+        Parameters:
+            None
+            
+            Returns:
+                None
+        '''
         class_id = self.class_selection.get()
-        student_name = simpledialog.askstring("Add Student", "Enter student name:")
+        student_name = simpledialog.askstring("Add Student", "Enter student name:", parent=self.master)
         if student_name:
             if student_name in self.controller.get_students():
-                messagebox.showerror("Error", "Student already exists in this class.")
+                messagebox.showerror("Error", "Student already exists in this class.", parent=self.master)
             else:
                 student_name = " ".join([word.capitalize() for word in student_name.split()])
                 success, message = self.controller.add_student(class_id, student_name)
                 if success:
-                    messagebox.showinfo("Success", message)
+                    messagebox.showinfo("Success", message, parent=self.master)
                     self.on_class_selected(event=None)
                 else:
-                    messagebox.showerror("Error", message)
+                    messagebox.showerror("Error", message, parent=self.master)
 
     def add_assignment(self) -> None:
+        '''
+        Add an assignment to the class
+        
+        Parameters:
+            None
+            
+            Returns:
+                None
+        '''
         class_id = self.class_selection.get()
-        assignment_details = simpledialog.askstring("Add Assignment", "Enter assignment details:")
+        assignment_details = simpledialog.askstring("Add Assignment", "Enter assignment details:", parent=self.master)
         if assignment_details:
             if assignment_details in self.controller.get_assignments():
-                messagebox.showerror("Error", "Assignment already exists.")
+                messagebox.showerror("Error", "Assignment already exists.", parent=self.master)
             else:
-                max_points = simpledialog.askinteger("Add Assignment", "Enter maximum points:")
+                max_points = simpledialog.askinteger("Add Assignment", "Enter maximum points:", parent=self.master)
                 if max_points is not None and max_points >= 0:
-                    success, message = self.controller.add_assignment(class_id, assignment_details,max_points)
+                    success, message = self.controller.add_assignment(class_id, assignment_details, max_points)
                     messagebox.showinfo("Success", message if success else "Failed to add assignment")
                     self.on_class_selected(event=None)
 
     def edit_grade(self, event: tk.Event) -> None:
+        '''
+        Edit the grade of a student in the treeview
+        
+        Parameters:
+            event (tk.Event): The event that triggered the function
+            
+            Returns:
+                None
+        '''
         region = self.grades_view.identify("region", event.x, event.y)
         if region == "cell":
             col_id = int(self.grades_view.identify_column(event.x).replace('#', '')) - 1
@@ -177,6 +311,16 @@ class GradebookApp:
                 self.update_grade(col_id, row_id)
     
     def update_grade(self, col_id: int, row_id: str) -> None:
+        '''
+        Update the grade of a student in the treeview
+        
+        Parameters:
+            col_id (int): The id of the column in the treeview
+            row_id (str): The id of the row in the treeview
+            
+            Returns:
+                None
+        '''
         current_value = self.grades_view.item(row_id, 'values')[col_id]
         new_grade = simpledialog.askinteger("Update Grade", "Enter new grade:", parent=self.master, initialvalue=current_value)
         if new_grade is not None and new_grade >= 0:
@@ -185,15 +329,41 @@ class GradebookApp:
             self.check_and_update_grade(student_name, assignment_name, new_grade, row_id, col_id)
     
     def check_and_update_grade(self, student_name: str, assignment_name: str, new_grade: int, row_id: str, col_id: int) -> None:
+        '''
+        Check if the new grade is higher than the maximum points and ask for confirmation
+        
+        Parameters:
+            student_name (str): The name of the student
+            assignment_name (str): The name of the assignment
+            new_grade (int): The new grade
+            row_id (str): The id of the row in the treeview
+            col_id (int): The id of the column in the treeview
+            
+            Returns:
+                None
+        '''
         max_points = self.controller.get_max_points(assignment_name)
         if new_grade > max_points:
-            confirmation = messagebox.askyesno("Confirmation", "The new grade is higher than the maximum points. Do you want to proceed?")
+            confirmation = messagebox.askyesno("Confirmation", "The new grade is higher than the maximum points. Do you want to proceed?", parent=self.master)
             if confirmation:
                 self.update_grade_in_controller_and_view(student_name, assignment_name, new_grade, row_id, col_id)
         else:
             self.update_grade_in_controller_and_view(student_name, assignment_name, new_grade, row_id, col_id)
     
     def update_grade_in_controller_and_view(self, student_name: str, assignment_name: str, new_grade: int, row_id: str, col_id: int) -> None:
+        '''
+        Update the grade in the controller and the treeview
+
+        Parameters:
+            student_name (str): The name of the student
+            assignment_name (str): The name of the assignment
+            new_grade (int): The new grade
+            row_id (str): The id of the row in the treeview
+            col_id (int): The id of the column in the treeview
+
+        Returns:
+            None
+        '''
         success = self.controller.update_grade(self.class_selection.get(), student_name, assignment_name, new_grade)
         if success:
             values = list(self.grades_view.item(row_id, 'values'))
@@ -201,7 +371,7 @@ class GradebookApp:
             self.grades_view.item(row_id, values=values)
             self.on_class_selected(event=None)
         else:
-            messagebox.showinfo("Info", "Grade not updated.")
+            messagebox.showinfo("Info", "Grade not updated.", parent=self.master)
 
 
 

@@ -1,21 +1,59 @@
 {
     "Math101": {
-        "Pete": {
-            "Test1": {
-                "score": 200000,
+        "Dillion B": {
+            "test 1": {
+                "score": 1000,
                 "max_points": 100
             },
-            "Homework1": {
-                "score": 50,
+            "test 2": {
+                "score": 70,
                 "max_points": 100
             },
-            "test 15": {
-                "score": 200,
-                "max_points": 200
+            "test 3": {
+                "score": 20,
+                "max_points": 300
+            }
+        },
+        "D Harmon": {
+            "test 1": {
+                "score": 90,
+                "max_points": 100
             },
-            "test 01": {
-                "score": 200,
-                "max_points": null
+            "test 2": {
+                "score": 80,
+                "max_points": 100
+            },
+            "test 3": {
+                "score": 10,
+                "max_points": 300
+            }
+        },
+        "J Bob": {
+            "test 1": {
+                "score": 80,
+                "max_points": 100
+            },
+            "test 2": {
+                "score": 10,
+                "max_points": 100
+            },
+            "test 3": {
+                "score": 70,
+                "max_points": 300
+            }
+        },
+        "T D Frand": {
+            "test 1": {
+                "score": 30,
+                "max_points": 100
+            },
+            "test 2": {
+                "score": 90,
+                "max_points": 100
+            },
+            "test 3": {
+                "score": 20,
+                "max_points": 300
             }
         }
     },
@@ -41,7 +79,7 @@
                 "max_points": 4
             },
             "5": {
-                "score": "Not Graded",
+                "score": 5,
                 "max_points": 5
             },
             "6": {
@@ -69,7 +107,7 @@
                 "max_points": 11
             },
             "12": {
-                "score": "Not Graded",
+                "score": 100,
                 "max_points": 12
             }
         },
@@ -91,7 +129,7 @@
                 "max_points": 4
             },
             "5": {
-                "score": "Not Graded",
+                "score": 5,
                 "max_points": 5
             },
             "6": {
@@ -149,7 +187,7 @@
                 "max_points": 6
             },
             "7": {
-                "score": "Not Graded",
+                "score": 10,
                 "max_points": 7
             },
             "8": {
@@ -165,7 +203,7 @@
                 "max_points": 10
             },
             "11": {
-                "score": "Not Graded",
+                "score": 10,
                 "max_points": 11
             },
             "12": {
@@ -945,7 +983,7 @@
                 "max_points": 5
             },
             "6": {
-                "score": "Not Graded",
+                "score": 20,
                 "max_points": 6
             },
             "7": {
@@ -991,7 +1029,7 @@
                 "max_points": 4
             },
             "5": {
-                "score": "Not Graded",
+                "score": 20,
                 "max_points": 5
             },
             "6": {
