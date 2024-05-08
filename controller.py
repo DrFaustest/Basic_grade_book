@@ -27,7 +27,7 @@ class GradebookController:
             if class_id:
                 self.current_class_data = data.get(class_id, {})
         except Exception as e:
-            print(f"Failed to load data: {e}")
+            pass
 
     def get_students(self) -> List[str]:
         """
@@ -119,7 +119,6 @@ class GradebookController:
             self.load_data(class_name)
             return True, "Class added successfully."
         except Exception as e:
-            print(f"Failed to add class: {e}")
             return False, "Failed to add class."
 
     def add_student(self, class_id: str, student_name: str) -> Tuple[bool, str]:
@@ -148,7 +147,6 @@ class GradebookController:
             self.load_data(class_id)
             return True, "Student added successfully."
         except Exception as e:
-            print(f"Failed to add student: {e}")
             return False, "Failed to add student."
 
     def add_assignment(self, class_id: str, assignment_name: str, max_points: Union[int, None] = None, initial_grade: Union[int, None] = None) -> Tuple[bool, str]:
@@ -176,7 +174,6 @@ class GradebookController:
             self.load_data(class_id)
             return True, "Assignment added successfully."
         except Exception as e:
-            print(f"Failed to add assignment: {e}")
             return False, "Failed to add assignment."
 
     def update_grade(self, class_id: str, student_name: str, assignment_name: str, grade: int) -> bool:
@@ -203,7 +200,6 @@ class GradebookController:
             self.load_data(class_id)
             return True
         except Exception as e:
-            print(f"Failed to update grade: {e}")
             return False
 
     def save_changes(self) -> bool:
@@ -218,7 +214,6 @@ class GradebookController:
                 json.dump(self.current_class_data, file, indent=4)
             return True
         except Exception as e:
-            print(f"Failed to save changes: {e}")
             return False
 
     def remove_student(self, class_id: str, student_name: str) -> Tuple[bool, str]:
@@ -245,7 +240,6 @@ class GradebookController:
             self.load_data(class_id)
             return True, "Student removed successfully."
         except Exception as e:
-            print(f"Failed to remove student: {e}")
             return False, "Failed to remove student."
 
     def remove_assignment(self, class_id: str, assignment_name: str) -> Tuple[bool, str]:
@@ -272,7 +266,6 @@ class GradebookController:
             self.load_data(class_id)
             return True, "Assignment removed successfully."
         except Exception as e:
-            print(f"Failed to remove assignment: {e}")
             return False, "Failed to remove assignment."
         
     def determine_class_grade(self, class_id: str, student_name: str) -> Union[int, None]:
@@ -299,7 +292,6 @@ class GradebookController:
                     earned_points += assignment['score']
             return round((earned_points / total_points) * 100, 2)
         except Exception as e:
-            print(f"Failed to determine class grade: {e}")
             return None
         
     def convert_to_letter_grade(self, grade: int) -> str:

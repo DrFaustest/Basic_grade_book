@@ -221,9 +221,6 @@ class GradebookApp:
         self.grades_view.focus(row_id)
 
         self.last_clicked = (student_name,assignment_name)
-        print(self.last_clicked)
-
-        print(f'You clicked on cell with value: {cell_value}')
     
     def update_treeview_columns(self, assignments: List[str]) -> None:
         '''
